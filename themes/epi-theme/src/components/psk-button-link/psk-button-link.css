@@ -1,0 +1,35 @@
+:host(.footer-item) div,
+:host(.footer-item) psk-icon .icon {
+    color: #4461B5 !important;
+}
+:host(.footer-item) psk-icon .icon {
+    font-size: x-large !important;
+}
+
+.xxlIcon .fa {
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.redIcon .fa {
+    color: #ff0700 !important;
+}
+
+.blackIcon .fa {
+    color: black !important;
+}
+
+.purpleIcon .fa {
+    color: #585eb2;
+}
+
+.cabinetIcon .fa {
+    margin-left: 26px !important;
+    color: black;
+}
+
+div {
+    color: black;
+    text-align-last: center!important;
+}
