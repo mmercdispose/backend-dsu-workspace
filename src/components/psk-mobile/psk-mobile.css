@@ -1,0 +1,47 @@
+/* Use mode="layout" for psk-mobile, if you want to style anything from component children */
+/* Use mode="default" with !important specifier if you want to override defaults from (Cardinal) styles/imports/colors.css */
+:host footer {
+    border-top: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+:host(.pdfViewer) main,
+:host(.noPadding) main{
+    padding: 0!important;
+}
+
+:host(.fullHeightWithFooter) main {
+    height: calc(100vh - 11rem) !important;
+}
+
+:host(.fullHeightWithoutFooter) main {
+    height: calc(100vh - 4rem)!important;
+}
+
+::slotted(iframe) {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.mobile > header > .title {
+    font-size: 1.2rem !important;
+}
+
+.mobile > header {
+    height: 38px !important;
+    background-color: #4461B5 !important;
+}
+
+.mobile > header .aside-menu {
+    top: 37px !important;
+}
+
+.mobile > header .btn {
+    min-width: 30px !important;
+    min-height: 39px !important;
+}
+
+/* :host(.background) main {
+    background-image: url('/assets/images/Favorite.png');
+    height: 100%;
+}  */

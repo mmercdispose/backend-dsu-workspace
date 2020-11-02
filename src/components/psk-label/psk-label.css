@@ -1,0 +1,14 @@
+label{
+    text-align: start;
+}
+
+psk-label{
+    display:flex;
+    align-items: center;
+}
+
+.drugName {
+    color: #00345B !important;
+    font-size: 21px !important;
+    font-weight: bold !important;
+}
