@@ -1,0 +1,176 @@
+/* clean old style inherited from bootstrap */
+
+psk-card,
+.card.psk-card,
+.card.psk-card .card-header {
+    font-family: nunito;
+    background: none;
+    display: block;
+    border: none;
+}
+
+.card-header {
+    background: #e9e8e8;
+}
+
+.card-body {
+    padding: 2rem 4rem;
+}
+
+psk-page div.card-body {
+    padding: 0;
+}
+
+.card-header h5 {
+    width: 100%;
+    color: #5076b3;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    line-height: 2.8rem;
+}
+
+
+/** first level of psk-card */
+
+.psk-card .card-header {
+    font-size: 130%;
+}
+
+
+/** second level of psk-card */
+
+.psk-card .psk-card .card-header {
+    font-size: 120%;
+}
+
+
+/** more than two levels of psk-card*/
+
+.psk-card .psk-card .psk-card .card-header {
+    font-size: 110%;
+}
+
+@media (max-width: 991px) {
+    .card-body {
+        padding: 2rem 2rem;
+    }
+}
+
+
+/** receive dossier **/
+
+.receive-dossier,
+.receive-dossier div.card.psk-card,
+.share-dossier,
+.share-dossier div.card.psk-card {
+    width: 100%;
+}
+
+.receive-dossier>div.card>div.card-body,
+.share-dossier>div.card>div.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    border: 0.1rem solid #b6cbee;
+    border-radius: 10px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #808080;
+}
+
+.share-qr {
+    width: 150px;
+    background: #fff;
+}
+
+.share-dossier div.image_container {
+    margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .receive-dossier div.card-body,
+    .share-dossier div.card-body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+/** move modal **/
+
+.move-modal psk-card,
+.move-modal .card,
+.move-modal .card-body,
+.move-modal psk-button,
+.move-modal button.btn.btn-primary,
+.move-modal psk-grid,
+.move-modal .row {
+    display: flex !important;
+    width: 100%;
+}
+
+.move-modal .wallet-header {
+    padding: 0.375rem 0.75rem;
+}
+
+.move-modal .wallet-header span.icon {
+    padding: 0.5rem;
+}
+
+.move-modal .wallet-container {
+    height: 30vh;
+    overflow: auto;
+}
+
+.move-modal .modal-buttons psk-button {
+    width: auto;
+}
+
+.move-modal .items div.row psk-label {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+psk-card.item-identifier {
+    border-bottom: 1px solid #BBBB;
+}
+
+psk-card.item-identifier .card {
+    background: transparent;
+}
+
+psk-card.item-identifier .card .card-body {
+    padding-left: 5px;
+}
+
+psk-card.item-identifier .card .card-body psk-icon span {
+    font-size: 1.25rem;
+}
+
+psk-card.item-identifier psk-label label {
+    color: #777;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.submit-app-card {
+    display: block;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 900px;
+}
+
+#qrCodeModal psk-barcode-scanner {
+    margin-left: 200px;
+}
+
+#shareQrCodeModal psk-barcode-generator .code_canvas {
+    height: 200px;
+}
