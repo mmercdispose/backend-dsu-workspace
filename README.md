@@ -1,5 +1,15 @@
 # epi-workspace
 
+forked from https://github.com/PharmaLedger-IMI/epi-workspace/commit/6e1eea0c769b69c4da1fc08c10e86b029898eff8
+
+## prerequisites for Mac OS
+- `npm i node-gyp -g`
+- `brew install gcc`
+- `brew install zeromq`
+- `brew install pkg-config`
+
+## Description
+
 *epi-workspace*  bundles all the necessary dependencies for building and running SSApps in a single package.
 
 ### Installation
