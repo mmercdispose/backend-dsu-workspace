@@ -1,19 +1,46 @@
 const {execSync} = require('child_process');
 const octopusFile = require('./octopus.json')
 
-const deps = octopusFile.dependencies.map((dep) => dep.src).filter((dep) => !!dep)
-
-const executeWrapper = (cmd) => {
+const executeCommand = (cmd) => {
   console.log(`executing: "${cmd}"`)
   execSync(cmd, {stdio: 'inherit'})
 }
 
-for (let i = 0; i < deps.length; i++) {
-  const dep = deps[i];
-  let origin = dep.split('/')[4].replace('.git', '')
-  console.log(`------------------------------`)
-  console.log(`${i}: running op for origin: ${origin}`)
-  
-  executeWrapper(`git remote add ${origin} ${dep}`)
-  executeWrapper(`git subtree add --squash --prefix=${origin}/ ${origin} master`)
+const gitDependencies = octopusFile.dependencies
+  .map((remote) => !!remote.src ? {
+      targetDir: remote.name,
+      src: remote.src.toLowerCase(),
+      origin: remote.src.toLowerCase().split('/')[4].replace('.git', '')
+    } : null )
+  .filter((remote) => !!remote)
+
+console.log(gitDependencies);
+
+const addUniqueRemotes = () => {
+  const uniqueOriginsMap = {}
+
+  for (let i = 0; i < gitDependencies.length; i++) {
+    const remote = gitDependencies[i];
+
+    if (uniqueOriginsMap[remote.origin]) {
+      continue
+    }
+
+    uniqueOriginsMap[remote.origin] = true
+    
+    executeCommand(`git remote add ${remote.origin} ${remote.src}`)
+    // executeCommand(`git remote remove ${remote.origin}`)
+  }
+
+  console.log('> all remotes added successfully')
 }
+
+const addSubtrees = () => {
+  for (let i = 0; i < gitDependencies.length; i++) {
+    const remote = gitDependencies[i];
+    executeCommand(`git subtree add --squash --prefix=${remote.targetDir}/ ${remote.origin} master`) 
+  }
+}
+
+addUniqueRemotes()
+addSubtrees()

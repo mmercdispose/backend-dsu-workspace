@@ -3,13 +3,8 @@
     "dependencies": [
         {
             "name": "cardinal",
-            "src": "http://github.com/privatesky/cardinal.git",
+            "src": "https://github.com/privatesky/cardinal.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd cardinal && npm install"
@@ -22,13 +17,8 @@
         },
         {
             "name": "privatesky",
-            "src": "http://github.com/privatesky/privatesky.git",
+            "src": "https://github.com/privatesky/privatesky.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd privatesky && npm install"
@@ -46,13 +36,8 @@
         },
         {
             "name": "menu-wallet-prototype",
-            "src": "http://github.com/privatesky/menu-wallet-prototype.git",
+            "src": "https://github.com/privatesky/menu-wallet-prototype.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd menu-wallet-prototype && npm install"
@@ -64,11 +49,6 @@
             "src": "https://github.com/PharmaLedger-IMI/leaflet-ssapp.git",
             "actions": [
                 {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
                     "type": "execute",
                     "cmd": "cd leaflet-ssapp && npm install"
                 }
@@ -76,13 +56,8 @@
         },
         {
             "name": "web-server/leaflet-wallet/loader",
-            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "src": "https://github.com/privatesky/web-dossier-loader.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd web-server/leaflet-wallet/loader && npm install"
@@ -99,13 +74,8 @@
         },
         {
             "name": "themes/citrus-theme",
-            "src": "http://github.com/privatesky/citrus-theme.git",
+            "src": "https://github.com/privatesky/citrus-theme.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd themes/citrus-theme && npm install"
@@ -114,13 +84,8 @@
         },
         {
             "name": "themes/savana-theme",
-            "src": "http://github.com/privatesky/savana-theme.git",
+            "src": "https://github.com/privatesky/savana-theme.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd themes/savana-theme && npm install"
@@ -129,13 +94,8 @@
         },
         {
             "name": "themes/clear-sky-theme",
-            "src": "http://github.com/privatesky/clear-sky-theme.git",
+            "src": "https://github.com/privatesky/clear-sky-theme.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd themes/clear-sky-theme && npm install"
@@ -146,22 +106,12 @@
             "name": "themes/epi-theme",
             "src": "https://github.com/PharmaLedger-IMI/epi-theme.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                }
             ]
         },
         {
             "name": "dossier-explorer-wallet-prototype",
             "src": "https://github.com/PrivateSky/dossier-explorer-wallet-prototype.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd dossier-explorer-wallet-prototype && npm install"
@@ -170,13 +120,8 @@
         },
         {
             "name": "web-server/dsu-fabric",
-            "src": "http://github.com/PharmaLedger-IMI/dsu-fabric.git",
+            "src": "https://github.com/PharmaLedger-IMI/dsu-fabric.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd web-server/dsu-fabric && npm install"
@@ -188,11 +133,6 @@
             "src": "https://github.com/PrivateSky/web-dossier-loader.git",
             "actions": [
                 {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
                     "type": "execute",
                     "cmd": "cd web-server/web-wallet/loader && npm install"
                 }
@@ -202,11 +142,6 @@
             "name": "gtin-resolver",
             "src": "https://github.com/PharmaLedger-IMI/gtin-resolver.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd gtin-resolver && npm install"
@@ -218,11 +153,6 @@
             "src": "https://github.com/PharmaLedger-IMI/gtin-dsu-wizard.git",
             "actions": [
                 {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
                     "type": "execute",
                     "cmd": "cd gtin-dsu-wizard && npm install"
                 }
@@ -232,11 +162,6 @@
             "name": "themes/blue-fluorite-theme",
             "src": "https://github.com/PrivateSky/blue-fluorite-theme.git",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd themes/blue-fluorite-theme && npm install"
@@ -248,11 +173,6 @@
             "src": "https://github.com/PrivateSky/dossier-explorer-ssapp.git",
             "actions": [
                 {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
                     "type": "execute",
                     "cmd": "cd dossier-explorer-ssapp && npm install"
                 }
@@ -262,11 +182,6 @@
             "name": "express-demo",
             "src": "https://github.com/PharmaLedger-IMI/express-demo",
             "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
                 {
                     "type": "execute",
                     "cmd": "cd express-demo && npm install"
