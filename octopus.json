@@ -104,9 +104,7 @@
         },
         {
             "name": "themes/epi-theme",
-            "src": "https://github.com/PharmaLedger-IMI/epi-theme.git",
-            "actions": [
-            ]
+            "src": "https://github.com/PharmaLedger-IMI/epi-theme.git"
         },
         {
             "name": "dossier-explorer-wallet-prototype",
