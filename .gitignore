@@ -1,6 +1,9 @@
 node_modules/
 modules/
+web-server/brick-storage/
+web-server/anchors/
 
+seed
 .env
 .srl
 .DS_Store
