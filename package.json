@@ -1,0 +1,66 @@
+{
+  "name": "PrivateSky",
+  "description": "Execute swarm choregraphies. Control your asynchronous code with explicit flows! Created mainly for simplifying code within SwarmESB/PrivateSky projects but can be used outside SwarmESB ecosystem. ",
+  "version": "0.5.0",
+  "_id": "privatesky@0.5.0",
+  "homepage": "https://github.com/PrivateSky/privatesky",
+  "author": {
+    "name": "Alboaie Sinica",
+    "email": "abss@axiologic.ro"
+  },
+  "contributors": [
+    {
+      "name": "Alboaie Sinica",
+      "email": "abss@axiologic.net"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PrivateSky/privatesky.git"
+  },
+  "bugs": {
+    "email": "salboaie@gmail.com",
+    "url": "https://github.com/PrivateSky/privatesky/issues"
+  },
+  "directories": {
+    "lib": "./engine"
+  },
+  "main": "./engine/core.js",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "LGPL",
+      "url": "http://www.gnu.org/licenses/lgpl.html"
+    }
+  ],
+  "dependencies": {
+    "@msgpack/msgpack": "^1.8.0",
+    "browserify": "^16.5.0",
+    "chokidar": "^3.0.2",
+    "isolated-vm": "2.0.3",
+    "octopus": "git+http://git@github.com/privatesky/octopus.git#1.0",
+    "source-map-support": "^0.5.13"
+  },
+  "scripts": {
+    "preinstall": "node bin/scripts/preinstall-checks.js",
+    "postinstall": "node ./node_modules/octopus/scripts/run && node ./node_modules/octopus/scripts/run optionalDependencies",
+    "update": "git pull && npm install",
+    "clear-stash": "node bin/scripts/githelpers/gitClearStash.js .",
+    "prepare-release": "node ./node_modules/octopus/scripts/run prepare-release",
+    "build": "node ./bin/scripts/pskbuild.js --projectMap=./builds/domain_build.json && node ./bin/scripts/pskbuild.js --projectMap=./builds/build.json",
+    "watch": "node ./bin/scripts/watcher.js --watch ./ --run \"./bin/scripts/pskbuild.js\" --args=\"--projectMap=./builds/build.json\" --ignore=\"/psknode/bundles/,/builds,/tests/,/bin/\"",
+    "start": "npm run build && node bin/scripts/serviceLauncher.js",
+    "git-status": "node bin/scripts/githelpers/gitStatusCheck.js .",
+    "tests": "npm run build && cd tests/psk-smoke-testing && node ../../bin/scripts/testrunner.js",
+    "test": "npm run build && cd tests/psk-smoke-testing && node ../../bin/scripts/testrunner.js",
+    "unit-tests": "npm run build && node ./bin/scripts/testrunner.js --config='./test-suites.json'",
+    "integration-tests": "npm run build && node ./bin/scripts/testrunner.js --directory='./tests/psk-integration-testing'",
+    "smoke-tests": "npm run build && node ./bin/scripts/testrunner.js --directory='./tests/psk-smoke-testing'",
+    "benchmark-tests": "npm run build && node ./bin/scripts/testrunner.js --directory='./tests/psk-benchmark-testing'",
+    "bash": "bash --init-file bin/bashEnv.sh",
+    "browser-scripts": "npm run build -- --only=edfsBar,ssappBoot,swBoot,swHostBoot,webshims --prod && node ./bin/scripts/copyBrowserBootScripts.js",
+    "start-vmq": "npm run build && node ./psknode/bin/scripts/basicStart.js ./psknode/bin/scripts/startZeromqProxy.js & node ./psknode/bin/scripts/basicStart.js ./psknode/bin/scripts/virtualMq.js --port=8080 --folder=\"../tmp\"",
+    "generate-test-wallet": "npm run build && node ./bin/scripts/wallet/generate-test-wallet.js",
+    "update-wallet-app": "node ./bin/scripts/wallet/update-wallet-app.js"
+  }
+}

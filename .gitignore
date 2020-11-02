@@ -1,0 +1,14 @@
+.idea
+node_modules
+modules
+tmp
+psknode/bundles
+!builds/tmp
+builds/tmp/*_intermediar.js
+tests
+!psknode/tests
+libraries
+package-lock.json
+latest-change-set.txt
+/Report-latest.html
+/Report-latest.txt
