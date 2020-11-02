@@ -1,0 +1,19 @@
+{
+  "name": "citrus-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "build-dossier": "node ./bin/build_dossier.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/privatesky/citrus-theme.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/privatesky/citrus-theme/issues"
+  },
+  "homepage": "https://github.com/privatesky/citrus-theme#readme"
+}
