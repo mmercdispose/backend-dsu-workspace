@@ -1,0 +1,14 @@
+{
+  "name": "dossier-explorer",
+  "version": "0.2.0",
+  "description": "Open Source Dossier Explorer",
+  "scripts": {
+    "postinstall": "node ./node_modules/octopus/scripts/run",
+    "prebuild": "node ./node_modules/octopus/scripts/run prebuild",
+    "build": "node ./bin/build.js"
+  },
+  "dependencies": {
+    "octopus": "git+http://github.com/privatesky/octopus.git#1.0"
+  },
+  "license": "MIT"
+}
