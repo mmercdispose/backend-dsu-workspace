@@ -29,7 +29,6 @@ const addUniqueRemotes = () => {
     uniqueOriginsMap[remote.origin] = true
     
     executeCommand(`git remote add ${remote.origin} ${remote.src}`)
-    // executeCommand(`git remote remove ${remote.origin}`)
   }
 
   console.log('> all remotes added successfully')
