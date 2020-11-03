@@ -26,7 +26,7 @@ For more details about a *workspace* check out the [template-workspace](https://
 ## Dependency updates and management
 Dependencies are added via `git subtree` (https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt) which is a technique to incorporate remote repositories into your (mono)repository with possiblity to futher work with them(pull new versions/commit and push new changes).
 
-**list all git dependencies and their remotes which are the same as the root folder:**
+**list all git dependencies (remote is the same as the root folder where the git repo code is living):**
 ```sh
 # the git subtree unfortunatelly does not provide any command/interface for this
 # you will have to use this having in mind that octopus dependencies might be only a subset of all remotes
@@ -34,14 +34,14 @@ git remote -v
 ```
 
 
-**pull the remote repo::**
+**pull the remote repo::** (`origin` is both origin and the code root folder)
 ```sh
-$ git subtree pull --squash --prefix=${origin-is-dir}/ ${origin-is-dir} master
+$ git subtree pull --squash --prefix=${origin}/ ${origin} master
 ```
 
-**push to the remote repo::**
+**push to the remote repo::** (`origin` is both origin and the code root folder)
 ```sh
-$ git subtree push --prefix=${origin-is-dir}/ ${origin-is-dir} master
+$ git subtree push --prefix=${origin}/ ${origin} master
 ```
 
 
