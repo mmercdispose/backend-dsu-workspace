@@ -2,7 +2,11 @@ node_modules/
 modules/
 web-server/brick-storage/
 web-server/anchors/
+gtin-resolver/build/bundles/
+web-server/dsu-fabric/scripts/bundles/
 
+lasthashlink
+latest-change-set.txt
 seed
 .env
 .srl
