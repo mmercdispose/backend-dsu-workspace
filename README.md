@@ -34,12 +34,12 @@ git remote -v
 ```
 
 
-**pull the remote repo::** (`origin` is both origin and the code root folder)
+**pull the remote repo::** (`origin` is both origin and the dependency code folder)
 ```sh
 $ git subtree pull --squash --prefix=${origin}/ ${origin} master
 ```
 
-**push to the remote repo::** (`origin` is both origin and the code root folder)
+**push to the remote repo::** (`origin` is both origin and the dependency code folder)
 ```sh
 $ git subtree push --prefix=${origin}/ ${origin} master
 ```
